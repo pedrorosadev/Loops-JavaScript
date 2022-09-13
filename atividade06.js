@@ -5,21 +5,24 @@ E no final imprimir a média dos números múltiplos de 3. Para sair digitar 0(z
 
 console.log("===========Desafio 06===========");
 
-const prompt = require('prompt-sync')();
+const prompt = require ('prompt-sync')();
 
-let count, media = 0, soma = 0
+let num, media = 0, count = 0, soma = 0;
 
-do{
-    count = Number(prompt ('Número: ')); 
+do {
+
+    num = Number(prompt('Número: ')); 
     soma = soma + num;
-    if (num % 3 === 0){
-        count++;
+
+    if (num % 3===0){
+        count++
     }
-}while(count != 0)
 
-media = soma / (count -1);
+} while (num !=0 );
 
-console.log(`Soma: ${soma}`);
-console.log(`Média: ${media}`);
+media = soma / (count - 1);
+
+ console.log (`\nSoma dos números múltiplos de 3: ${soma}`);
+ console.log (`Média dos números multiplos de 3: ${media}`);
 
 console.log('\n[0] Para sair');
